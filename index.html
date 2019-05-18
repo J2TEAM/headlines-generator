@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://junookyo.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Headlines Generator | J2TEAM</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/paper-kit.css?v=2.3.0" rel="stylesheet">
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/demo/demo.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header-2">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+        <div class="container">
+          <a class="navbar-brand mb-0" href="https://www.facebook.com/179034362668856/" target="_blank">J2TEAM</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+            <ul class="navbar-nav ml-auto">
+              <a href="https://www.facebook.com/groups/j2team.community/" class="btn btn-link btn-neutral" target="_blank">Community</a>
+              <a href="https://junookyo.blogspot.com/" class="btn btn-link btn-neutral" target="_blank">Blog</a>
+              <a href="https://twitter.com/juno_okyo" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100003880469096" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-facebook"></i></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1556306535-abccb1f2533c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+        <div class="filter"></div>
+        <div class="content-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 ml-auto mr-auto text-center">
+                <h1 class="title"> Find your next title</h1>
+                <h5 class="description">Do you need a good headline to attract more clicks? Want more visitors to your website? This tool will help you automatically create interesting headlines in few seconds.</h5>
+                <br />
+              </div>
+              <div class="col-md-10 ml-auto mr-auto">
+                <div class="card card-raised card-form-horizontal no-transition" id="juno_okyo">
+                  <div class="card-body">
+                    <form method="post" action="#" v-on:submit.prevent="onSubmit">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <input type="text" placeholder="Keyword 1" class="form-control" v-model="key1" autofocus required>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <input type="text" placeholder="Keyword 2 (optional)" class="form-control" v-model="key2">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <button type="submit" class="btn btn-danger btn-block"><i class="nc-icon nc-zoom-split"></i> &nbsp; Generate</button>
+                        </div>
+                      </div>
+                    </form>
+
+                    <h3 v-if="result !== null">{{result}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    
+    <!-- Control Center for Paper Kit: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/paper-kit.js?v=2.3.0"></script>
+
+    <!--  Plugin for presentation page - isometric cards  -->
+    <script src="./assets/js/plugins/presentation-page/main.js"></script>
+    <script src="./assets/js/juno_okyo.js"></script>
+    <script>
+    $(document).ready(function() {
+      if (window_width >= 768) {
+        $(window).on('scroll', pk.checkScrollForPresentationPage);
+      }
+    });
+    </script>
+  </body>
+</html>
